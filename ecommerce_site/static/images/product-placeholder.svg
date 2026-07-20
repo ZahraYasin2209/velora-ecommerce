@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" role="img" aria-labelledby="title description">
+  <title id="title">Velora product placeholder</title>
+  <desc id="description">A neutral placeholder shown when a product image is unavailable.</desc>
+  <rect width="640" height="800" fill="#f5f6f8"/>
+  <rect x="80" y="70" width="480" height="660" rx="28" fill="#e8ebef"/>
+  <path d="M252 206c0-37 30-67 68-67s68 30 68 67v56l101 70-48 127-55-27v214H254V432l-55 27-48-127 101-70z" fill="#343a40"/>
+  <path d="M277 216h86" stroke="#f5f6f8" stroke-width="12" stroke-linecap="round"/>
+  <text x="320" y="704" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#343a40">VELORA</text>
+  <text x="320" y="740" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#6c757d">Product image unavailable</text>
+</svg>

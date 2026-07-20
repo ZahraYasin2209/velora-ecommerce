@@ -1,0 +1,21 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+
+# Django migrations (optional, ignore compiled files)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# Django local files (optional)
+*.sqlite3
+*.log
+*.env
+
+# User-uploaded files
+media/
