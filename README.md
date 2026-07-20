@@ -1,100 +1,122 @@
 # Velora
 
-**Velora** is a full-stack Django e-commerce application for a fashion catalogue. It provides product discovery, filtering, account management, carts, checkout, product reviews, and a protected management dashboard.
+Velora is a Django-based fashion e-commerce application that lets users discover products, manage a shopping cart, place orders, and share product reviews. It also provides a role-protected dashboard for managing the store catalogue.
 
-## Highlights
+## Features
 
-- Browse a paginated product catalogue with search, category, size, price, and sort filters.
-- View product details, available sizes, stock, descriptions, images, and customer reviews.
-- Register, sign in, update a profile, and change a password.
-- Add products to a cart and complete a checkout and order-review flow.
-- Submit product reviews as an authenticated user.
-- Manage products and categories through a role-protected dashboard.
-- Import the sample catalogue from JSON with a custom Django management command.
+- Browse a paginated fashion catalogue
+- Search products by name
+- Filter products by category, size, and price
+- Sort products by price or newest items
+- View product details, available sizes, stock, and customer reviews
+- Register, log in, update a profile, and change a password
+- Add products to a cart and complete checkout
+- Create and review orders
+- Submit reviews as an authenticated user
+- Manage products and categories through an admin dashboard
+- Import the sample product catalogue from JSON
 
-## Built with
+## Tech Stack
 
-| Area | Technology |
-| --- | --- |
-| Backend | Python, Django |
-| Database | SQLite (development) |
-| Filtering | django-filter |
-| Template utilities | django-widget-tweaks |
-| Admin utilities | django-extensions |
-| Frontend | Django templates, CSS, JavaScript |
+- Python
+- Django
+- SQLite
+- django-filter
+- django-extensions
+- django-widget-tweaks
+- HTML, CSS, and JavaScript
 
-## Getting started
+## Screenshots
+
+Add your screenshots to `docs/images/` using the filenames below. They will appear on GitHub after you add and commit the image files.
+
+### Home Page
+
+![Velora home page](docs/images/homepage-1.png)
+
+### Product Catalogue
+
+![Velora product catalogue](docs/images/homepage-2.png)
+
+## Project Structure
+
+```text
+velora-django-ecommerce/
+├── ecommerce_site/          # Project configuration, shared templates, static assets
+├── products/                # Product models, filters, templates, and catalogue importer
+├── orders/                  # Cart, checkout, order, and payment logic
+├── users/                   # Authentication, user profiles, and shipping addresses
+├── dashboard/               # Product and category management dashboard
+├── docs/images/             # Project screenshots used in this README
+├── manage.py                # Django command-line entry point
+├── requirements.txt         # Python dependencies
+└── README.md
+```
+
+## Getting Started
 
 ### Prerequisites
 
 - Python 3.12 or later
 - Git
 
-### Installation
+### Clone and install
 
 ```powershell
-git clone https://github.com/<your-github-username>/velora-django-ecommerce.git
-cd velora-django-ecommerce
+git clone https://github.com/ZahraYasin2209/velora-ecommerce.git
+cd velora-ecommerce
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+### Set up the database
+
+```powershell
 python manage.py migrate
 ```
 
-### Load the catalogue and run the app
-
-The dataset is intentionally imported separately; starting the development server does not load it automatically.
+### Import the product catalogue
 
 ```powershell
 python manage.py load_product_catalog_json_and_populate_models
+```
+
+### Run the application
+
+```powershell
 python manage.py runserver
 ```
 
-Open [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in a browser. The catalogue is at [http://127.0.0.1:8000/products/](http://127.0.0.1:8000/products/).
+Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser.
 
-### Create an administrator
+## Admin Access
+
+Create an administrator account:
 
 ```powershell
 python manage.py createsuperuser
 ```
 
-The Django admin is available at [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/). The app dashboard is available at `/admin_dashboard/` for users with the required role.
+After starting the server, log in at [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/).
 
-## Image-data note
-
-The included JSON stores image URLs from an external third-party website. Those URLs can expire or reject requests from another site, which produces broken image icons even though the product records import correctly. For a production-ready project, use images you own or are licensed to use, save them locally under `media/` or upload them to your own cloud storage, and store those URLs in the database.
-
-## Project structure
-
-```text
-ecommerce_site/       Project settings, root URLs, shared templates, and static files
-products/              Catalogue models, filters, templates, and JSON import command
-orders/                Cart, checkout, orders, and payments
-users/                 Authentication, profiles, and shipping addresses
-dashboard/             Role-protected product and category management UI
-```
-
-## Useful commands
+## Useful Commands
 
 ```powershell
-# Validate Django configuration
+# Check the project configuration
 python manage.py check
 
-# Create and apply new migrations after changing models
+# Create model migrations
 python manage.py makemigrations
+
+# Apply migrations
 python manage.py migrate
 
-# Re-import the sample catalogue
+# Import or update the sample catalogue
 python manage.py load_product_catalog_json_and_populate_models
 ```
 
-## Repository hygiene
+## Author
 
-Do not commit `.venv/`, `venv/`, `db.sqlite3`, `.env`, or user-uploaded `media/` files. Keep migration files and `products/management/data/clothes.json` so a fresh clone can rebuild the database and load the catalogue.
-
-Before deployment, move `SECRET_KEY`, `DEBUG`, database credentials, and `ALLOWED_HOSTS` into environment-based production settings.
-
-## License
-
-This project currently has no license. Add a license file before permitting reuse or contributions.
+Zahra Yasin
