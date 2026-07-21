@@ -1,20 +1,19 @@
 # Velora
 
-Velora is a Django-based fashion e-commerce application where users can discover products, manage a shopping cart, place orders, and share product reviews. A role-protected dashboard supports product and category management.
+**Velora** is a **Django-based fashion e-commerce application** where users can discover products, manage a shopping cart, place orders, and share product reviews. A role-protected dashboard supports product and category management.
 
 ## Features
 
-- Browse a paginated fashion catalogue
-- Search products by name
-- Filter products by category, size, and price
-- Sort products by price or newest items
-- View product details, available sizes, stock, and customer reviews
+- **Browse** a paginated fashion catalogue
+- **Search products** by name or type
+- **Filter products** by category, size, and price
+- **Sort products** by price, size or newest items
+- **View product** details, available sizes, stock, and customer reviews
 - Register, log in, update a profile, and change a password
-- Add products to a cart and complete checkout
-- Create and review orders
-- Submit reviews as an authenticated user
-- Manage products and categories through an admin dashboard
-- Import the sample product catalogue from JSON
+- **Add products** to a cart and complete checkout
+- **Create and review orders**
+- **Submit reviews** as an authenticated user
+- **Manage products and categories** through an Django admin dashboard
 
 ## Tech Stack
 
@@ -24,7 +23,7 @@ Velora is a Django-based fashion e-commerce application where users can discover
 - django-filter
 - django-extensions
 - django-widget-tweaks
-- HTML, CSS, and JavaScript
+- HTML, CSS, and JavaScript (templates)
 
 ## Demo
 
@@ -41,7 +40,6 @@ velora-ecommerce/
 |-- dashboard/               # Product and category management dashboard
 |-- manage.py                # Django command-line entry point
 |-- requirements.txt         # Python dependencies
-`-- README.md
 ```
 
 ## Getting Started
@@ -56,8 +54,6 @@ velora-ecommerce/
 ```powershell
 git clone https://github.com/ZahraYasin2209/velora-ecommerce.git
 cd velora-ecommerce
-python -m venv .venv
-python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
