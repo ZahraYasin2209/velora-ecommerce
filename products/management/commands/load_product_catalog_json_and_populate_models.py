@@ -122,6 +122,10 @@ class Command(BaseCommand):
                         }
                     )
 
+                    # Make repeated catalogue imports idempotent: each product
+                    # keeps one fresh set of size-specific details.
+                    ProductDetail.objects.filter(product=product_instance).delete()
+
                     product_info_list = product_json_record.get(
                         "product_info", []
                     )
