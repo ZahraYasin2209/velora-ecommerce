@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import redirect_to_login
 from django.db import transaction
 from django.db.models import F
 from django.shortcuts import get_object_or_404, redirect
@@ -27,6 +28,18 @@ from .utils import get_or_create_user_cart
 
 
 class AddToCartView(LoginRequiredMixin, View):
+    def handle_no_permission(self):
+        product_page_url = reverse(
+            "products:product_detail",
+            kwargs={"pk": self.kwargs["product_pk"]},
+        )
+
+        return redirect_to_login(
+            product_page_url,
+            self.get_login_url(),
+            self.get_redirect_field_name(),
+        )
+
     def post(self, request, product_pk):
         quantity_to_add = int(request.POST.get("quantity", 1))
 
