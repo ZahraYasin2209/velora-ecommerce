@@ -1,6 +1,6 @@
 # Velora
 
-Velora is a Django-based fashion e-commerce application that lets users discover products, manage a shopping cart, place orders, and share product reviews. It also provides a role-protected dashboard for managing the store catalogue.
+Velora is a Django-based fashion e-commerce application where users can discover products, manage a shopping cart, place orders, and share product reviews. A role-protected dashboard supports product and category management.
 
 ## Features
 
@@ -26,31 +26,22 @@ Velora is a Django-based fashion e-commerce application that lets users discover
 - django-widget-tweaks
 - HTML, CSS, and JavaScript
 
-## Screenshots
+## Demo
 
-Add your screenshots to `docs/images/` using the filenames below. They will appear on GitHub after you add and commit the image files.
-
-### Home Page
-
-![Velora home page](docs/images/homepage-1.png)
-
-### Product Catalogue
-
-![Velora product catalogue](docs/images/homepage-2.png)
+[Watch the Velora demo video](docs/Video.mp4)
 
 ## Project Structure
 
 ```text
-velora-django-ecommerce/
-├── ecommerce_site/          # Project configuration, shared templates, static assets
-├── products/                # Product models, filters, templates, and catalogue importer
-├── orders/                  # Cart, checkout, order, and payment logic
-├── users/                   # Authentication, user profiles, and shipping addresses
-├── dashboard/               # Product and category management dashboard
-├── docs/images/             # Project screenshots used in this README
-├── manage.py                # Django command-line entry point
-├── requirements.txt         # Python dependencies
-└── README.md
+velora-ecommerce/
+|-- ecommerce_site/          # Project configuration, shared templates, static assets
+|-- products/                # Product models, filters, templates, and catalogue importer
+|-- orders/                  # Cart, checkout, order, and payment logic
+|-- users/                   # Authentication, user profiles, and shipping addresses
+|-- dashboard/               # Product and category management dashboard
+|-- manage.py                # Django command-line entry point
+|-- requirements.txt         # Python dependencies
+`-- README.md
 ```
 
 ## Getting Started
@@ -66,7 +57,6 @@ velora-django-ecommerce/
 git clone https://github.com/ZahraYasin2209/velora-ecommerce.git
 cd velora-ecommerce
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
