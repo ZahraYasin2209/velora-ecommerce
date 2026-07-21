@@ -28,7 +28,7 @@ Velora is a Django-based fashion e-commerce application where users can discover
 
 ## Demo
 
-[Watch the Velora demo video](docs/Video.mp4)
+https://github.com/user-attachments/assets/0e7a005e-2b41-409d-a788-dbb8f064adf4
 
 ## Project Structure
 
