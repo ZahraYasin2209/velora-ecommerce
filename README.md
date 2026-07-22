@@ -1,12 +1,10 @@
 # 🛍️ Velora
 
-> A modern Django-based fashion e-commerce platform featuring product discovery, shopping cart management, secure authentication, order processing, and an administrative dashboard.
-
----
+> A modern **Django-based fashion e-commerce platform** featuring product discovery, shopping cart management, secure authentication, order processing, and an administrative dashboard.
 
 ## 🚀 Project Overview
 
-Velora is a full-featured fashion e-commerce application built with Django. It enables customers to browse products, manage shopping carts, place orders, and leave product reviews, while providing administrators with a secure dashboard to manage products, categories, inventory, and customer orders.
+**Velora** is a full-featured fashion e-commerce application built with Django. It enables customers to browse products, manage shopping carts, place orders, and leave product reviews, while providing administrators with a secure dashboard to manage products, categories, inventory, and customer orders.
 
 This project demonstrates practical implementation of Django concepts including:
 
@@ -23,15 +21,15 @@ This project demonstrates practical implementation of Django concepts including:
 
 ### Customer Features
 
-- Browse a paginated fashion catalogue
-- Search products by name or type
-- Filter products by category, size, and price
-- Sort products by price, size, or newest arrivals
-- View detailed product information, available sizes, stock status, and customer reviews
+- **Browse** a paginated fashion catalogue
+- **Search products** by name or type
+- **Filter products** by category, size, and price
+- **Sort products** by price, size, or newest arrivals
+- **View detailed product** information, available sizes, stock status, and customer reviews
 - Register, log in, update profiles, and change passwords
-- Add products to a shopping cart
-- Place and track orders
-- Submit product reviews as an authenticated user
+- **Add products** to a shopping cart
+- **Place and track** orders
+- **Submit product reviews** as an authenticated user
 
 ### Admin Features
 
@@ -66,13 +64,9 @@ This project demonstrates practical implementation of Django concepts including:
 - django-extensions
 - django-widget-tweaks
 
----
-
 ## 🎥 Demo
 
 https://github.com/user-attachments/assets/0e7a005e-2b41-409d-a788-dbb8f064adf4
-
----
 
 ## 📂 Project Structure
 
@@ -89,8 +83,6 @@ velora-ecommerce/
 ├── requirements.txt
 └── README.md
 ```
-
----
 
 ## 🚀 Getting Started
 
@@ -158,7 +150,6 @@ Open your browser and visit:
 http://127.0.0.1:8000/
 ```
 
----
 
 ## 👤 Admin Panel
 
@@ -167,8 +158,6 @@ After creating a superuser, access the Django Admin Panel at:
 ```
 http://127.0.0.1:8000/admin/
 ```
-
----
 
 ## 📌 Useful Commands
 
@@ -192,8 +181,6 @@ python manage.py createsuperuser
 python manage.py load_product_catalog_json_and_populate_models
 ```
 
----
-
 ## 🔮 Future Improvements
 
 - Integrate online payment gateways (Stripe/PayPal)
@@ -207,13 +194,9 @@ python manage.py load_product_catalog_json_and_populate_models
 - Unit and integration testing
 - CI/CD pipeline with GitHub Actions
 
----
-
 ## 📄 License
 
 This project is intended for educational and portfolio purposes.
-
----
 
 ## 👩‍💻 Author
 
@@ -222,4 +205,4 @@ This project is intended for educational and portfolio purposes.
 Backend & GenAI Engineer
 
 - GitHub: https://github.com/ZahraYasin2209
-- LinkedIn: https://www.linkedin.com/in/zahra-yasin/
+- LinkedIn: https://www.linkedin.com/in/zahra-yasin-18b3a6246/
