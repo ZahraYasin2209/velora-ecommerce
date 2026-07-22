@@ -1,108 +1,225 @@
-# Velora
+# 🛍️ Velora
 
-**Velora** is a **Django-based fashion e-commerce application** where users can discover products, manage a shopping cart, place orders, and share product reviews. A role-protected dashboard supports product and category management.
+> A modern Django-based fashion e-commerce platform featuring product discovery, shopping cart management, secure authentication, order processing, and an administrative dashboard.
 
-## Features
+---
 
-- **Browse** a paginated fashion catalogue
-- **Search products** by name or type
-- **Filter products** by category, size, and price
-- **Sort products** by price, size or newest items
-- **View product** details, available sizes, stock, and customer reviews
-- Register, log in, update a profile, and change a password
-- **Add products** to a cart and complete checkout
-- **Create and review orders**
-- **Submit reviews** as an authenticated user
-- **Manage products and categories** through an Django admin dashboard
+## 🚀 Project Overview
 
-## Tech Stack
+Velora is a full-featured fashion e-commerce application built with Django. It enables customers to browse products, manage shopping carts, place orders, and leave product reviews, while providing administrators with a secure dashboard to manage products, categories, inventory, and customer orders.
 
-- Python
+This project demonstrates practical implementation of Django concepts including:
+
+- Model-driven architecture
+- Authentication and authorization
+- Database relationships using Django ORM
+- Custom management commands
+- Product filtering and searching
+- Django Admin customization
+
+---
+
+## ✨ Features
+
+### Customer Features
+
+- Browse a paginated fashion catalogue
+- Search products by name or type
+- Filter products by category, size, and price
+- Sort products by price, size, or newest arrivals
+- View detailed product information, available sizes, stock status, and customer reviews
+- Register, log in, update profiles, and change passwords
+- Add products to a shopping cart
+- Place and track orders
+- Submit product reviews as an authenticated user
+
+### Admin Features
+
+- Manage products and categories
+- Manage inventory and stock
+- View and manage customer orders
+- Access Django's secure admin panel
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+- Python 3.12
 - Django
+
+### Database
+
 - SQLite
+
+### Frontend
+
+- HTML
+- CSS
+- JavaScript
+- Django Templates
+
+### Third-Party Packages
+
 - django-filter
 - django-extensions
 - django-widget-tweaks
-- HTML, CSS, and JavaScript (templates)
 
-## Demo
+---
+
+## 🎥 Demo
 
 https://github.com/user-attachments/assets/0e7a005e-2b41-409d-a788-dbb8f064adf4
 
-## Project Structure
+---
+
+## 📂 Project Structure
 
 ```text
 velora-ecommerce/
-|-- ecommerce_site/          # Project configuration, shared templates, static assets
-|-- products/                # Product models, filters, templates, and catalogue importer
-|-- orders/                  # Cart, checkout, order, and payment logic
-|-- users/                   # Authentication, user profiles, and shipping addresses
-|-- dashboard/               # Product and category management dashboard
-|-- manage.py                # Django command-line entry point
-|-- requirements.txt         # Python dependencies
+│
+├── ecommerce_site/      # Project configuration, shared templates & static assets
+├── dashboard/           # Admin dashboard for products and categories
+├── orders/              # Shopping cart, checkout, and order management
+├── products/            # Products, categories, filters, and catalogue importer
+├── users/               # Authentication, profiles, and shipping addresses
+│
+├── manage.py
+├── requirements.txt
+└── README.md
 ```
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Python 3.12 or later
+- Python 3.12+
 - Git
 
-### Clone and install
+### 1. Clone the Repository
 
-```powershell
+```bash
 git clone https://github.com/ZahraYasin2209/velora-ecommerce.git
 cd velora-ecommerce
+```
+
+### 2. Create a Virtual Environment (Recommended)
+
+#### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### macOS/Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### Set up the database
+### 4. Apply Database Migrations
 
-```powershell
+```bash
 python manage.py migrate
 ```
 
-### Import the product catalogue
+### 5. Import the Sample Product Catalogue
 
-```powershell
+```bash
 python manage.py load_product_catalog_json_and_populate_models
 ```
 
-### Run the application
+### 6. Create an Administrator Account
 
-```powershell
-python manage.py runserver
-```
-
-Visit [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser.
-
-## Admin Access
-
-Create an administrator account:
-
-```powershell
+```bash
 python manage.py createsuperuser
 ```
 
-After starting the server, log in at [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/).
+### 7. Start the Development Server
 
-## Useful Commands
+```bash
+python manage.py runserver
+```
 
-```powershell
-# Check the project configuration
+Open your browser and visit:
+
+```
+http://127.0.0.1:8000/
+```
+
+---
+
+## 👤 Admin Panel
+
+After creating a superuser, access the Django Admin Panel at:
+
+```
+http://127.0.0.1:8000/admin/
+```
+
+---
+
+## 📌 Useful Commands
+
+```bash
+# Start development server
+python manage.py runserver
+
+# Check project configuration
 python manage.py check
 
-# Create model migrations
+# Create migrations
 python manage.py makemigrations
 
 # Apply migrations
 python manage.py migrate
 
-# Import or update the sample catalogue
+# Create superuser
+python manage.py createsuperuser
+
+# Import sample product catalogue
 python manage.py load_product_catalog_json_and_populate_models
 ```
 
-## Author
+---
 
-Zahra Yasin
+## 🔮 Future Improvements
+
+- Integrate online payment gateways (Stripe/PayPal)
+- Wishlist functionality
+- Product recommendation system
+- Email notifications
+- Real-time order tracking
+- REST API using Django REST Framework
+- Docker support
+- PostgreSQL deployment
+- Unit and integration testing
+- CI/CD pipeline with GitHub Actions
+
+---
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
+
+---
+
+## 👩‍💻 Author
+
+**Zahra Yasin**
+
+Backend & GenAI Engineer
+
+- GitHub: https://github.com/ZahraYasin2209
+- LinkedIn: https://www.linkedin.com/in/zahra-yasin/
