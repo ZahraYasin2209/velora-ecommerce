@@ -1,5 +1,5 @@
 # 🛍️ Velora
-A modern **Django-based fashion e-commerce platform** featuring product discovery, shopping cart management, secure authentication, order processing, and an administrative dashboard.
+> A modern **Django-based fashion e-commerce platform** featuring product discovery, shopping cart management, secure authentication, order processing, and an administrative dashboard.
 
 ## 🚀 Project Overview
 
